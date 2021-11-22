@@ -8,15 +8,12 @@
 import Foundation
 
 struct Results: Decodable {
-    let  hits: [Post]
+    let  sources: [Post]
 }
 
 struct Post: Decodable, Identifiable {
-    var id: String {
-        return objectID
-    }
-    let objectID: String
-    let points: Int
-    let title: String
+    var id: String
+    let name: String
+    let description: String
     let url: String?
 }
